@@ -19,3 +19,5 @@ for i in range(3):
 
 plt.ylim(-200,200)
 plt.show()
+
+![internal_image](.//randomwalk.PNG)
