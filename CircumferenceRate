@@ -1,5 +1,5 @@
 #
-# 몬테카를로 방법으로 원주율 구하기
+# 몬테카를로 시뮬레이션으로 원주율 구하기
 #
 
 import numpy as np
@@ -24,3 +24,19 @@ plt.ylim(0,1)
 plt.show()
 
 print(4*n/n_point)
+
+----------------
+
+import numpy as np
+
+n_point = 10
+while n_point < 10**7:
+  n = 0
+  point = np.random.rand(n_point, 2)
+  for i in range(n_point):
+    x, y = point[i][0], point[i][1]
+    r = x**2 + y**2
+    if r<1:
+      n = n+1
+  print(n_point, 4*n/n_point)
+  n_point = n_point*10
