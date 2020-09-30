@@ -40,3 +40,31 @@ while n_point < 10**7:
       n = n+1
   print(n_point, 4*n/n_point)
   n_point = n_point*10
+
+-----------------
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+count_list = []
+pi_list = []
+
+count = 10
+while count < 10**7:
+  n = 0
+  point = np.random.rand(count, 2)
+  for i in range(count):
+    x, y = point[i][0], point[i][1]
+    r = x**2 + y**2
+    if r<1:
+      n = n+1
+  count_list.append(count)
+  pi_list.append(4*n/count)
+  print(count, 4*n/count)
+  count = count*3
+
+ind = np.arange(len(pi_list))
+plt.plot(ind, pi_list)
+plt.xticks(ind, count_list)
+plt.xticks(rotation = 35)
+plt.show()
