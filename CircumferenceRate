@@ -1,0 +1,26 @@
+#
+# 몬테카를로 방법으로 원주율 구하기
+#
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+n_point = 10**4
+n = 0
+point = np.random.rand(n_point, 2)
+
+plt.figure(figsize=(5,5))
+for i in range(n_point):
+  x, y = point[i][0], point[i][1]
+  r = x**2 + y**2
+  if r<1:
+    color = 'r'
+    n = n+1
+  else:
+    color = 'b'
+  plt.scatter(x, y, s=0.2, c=color)
+plt.xlim(0,1)
+plt.ylim(0,1)
+plt.show()
+
+print(4*n/n_point)
