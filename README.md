@@ -1,4 +1,4 @@
-# Monte_Carlo_Simulation
+# Monte Carlo Simulation
 
 원주율 구하기 프로그램(CircumferenceRate) 실행 결과 이미지
 
