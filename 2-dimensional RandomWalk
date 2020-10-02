@@ -1,0 +1,13 @@
+#
+# 2차원 랜덤워크(이동경로는 상하좌우) 몬테카를로 시뮬레이션
+#
+
+import turtle as t
+import random
+
+t.speed(0)
+
+for i in range(2500):
+    # t.setheading(random.randint(1,360))
+    t.setheading(random.randint(1,4)*90)
+    t.forward(5)
