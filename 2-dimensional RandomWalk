@@ -8,6 +8,5 @@ import random
 t.speed(0)
 
 for i in range(2500):
-    # t.setheading(random.randint(1,360))
     t.setheading(random.randint(1,4)*90)
     t.forward(5)
